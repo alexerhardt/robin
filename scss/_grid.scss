@@ -1,0 +1,46 @@
+$maxcols: 6;
+
+$breakpoints: (
+    null: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px
+);
+
+@function get-col-width($number) {
+    @return percentage($number / $maxcols)
+}
+
+// TODO: Clean these up
+.bg-purple { background-color: #89479B; }
+.bg-yellow { background-color: #E38712; }
+.force-height { height: 100px; }
+
+*[class^="row"], *[class*=" row"] {
+    display: flex;
+    width: 100%;
+}
+
+*[class^="col-"], *[class*=" col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+}
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+    @if ($breakpoint-name != null) {
+        $breakpoint-name: "-" + $breakpoint-name;
+    }
+
+    @media (min-width: #{$breakpoint-value}) {
+        @for $i from 1 through $maxcols {
+            .row-#{$i}#{$breakpoint-name} {
+                width: get-col-width($i);
+            }
+            
+            .col-#{$i}#{$breakpoint-name} {
+                width: get-col-width($i);
+            }
+        }
+    }
+}
