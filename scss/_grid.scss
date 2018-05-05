@@ -27,6 +27,10 @@ $breakpoints: (
     color: white;
 }
 
+/**
+ * Grid generator
+ * For each breakpoint, generates a media query wiith all possible suffixes.
+ */
 @each $breakpoint-name, $breakpoint-value in $breakpoints {
     @if ($breakpoint-name != null) {
         $breakpoint-name: "-" + $breakpoint-name;

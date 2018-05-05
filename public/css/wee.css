@@ -353,6 +353,10 @@ template {
   color: white;
 }
 
+/**
+ * Grid generator
+ * For each breakpoint, generates a media query wiith all possible suffixes.
+ */
 @media (min-width: 0px) {
   .row-1 {
     width: 16.66667%;
@@ -507,4 +511,35 @@ template {
   .col-6-lg {
     width: 100%;
   }
+}
+
+.navbar {
+  background-color: orange;
+  display: flex;
+  width: 100%;
+}
+
+.nav-item {
+  padding: 2.5em 2.5em;
+}
+
+.nav-list {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-start: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+
+.card {
+  padding: 2.5em 2.5em;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+  background: white;
+  color: black;
 }
