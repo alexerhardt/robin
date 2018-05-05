@@ -7,13 +7,18 @@
 }
 
 .navbar {
+    // Remove colors
+    color: white; 
     background-color: orange;
     display: flex;
     width: 100%;
 }
 
 .nav-item {
-    padding: 2.5em 2.5em;
+    padding: 0 2.5em;
+    height: 5em;
+    display: flex;
+    align-items: center;
 }
 
 .nav-list {

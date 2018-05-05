@@ -345,6 +345,7 @@ template {
 *[class^="row"], *[class*=" row"] {
   display: flex;
   width: 100%;
+  margin: 0 auto;
 }
 
 *[class^="col-"], *[class*=" col-"] {
@@ -513,14 +514,22 @@ template {
   }
 }
 
+.hero-text {
+  height: inherit;
+}
+
 .navbar {
+  color: white;
   background-color: orange;
   display: flex;
   width: 100%;
 }
 
 .nav-item {
-  padding: 2.5em 2.5em;
+  padding: 0 2.5em;
+  height: 5em;
+  display: flex;
+  align-items: center;
 }
 
 .nav-list {
@@ -535,6 +544,22 @@ template {
   display: inline-block;
   list-style-type: none;
   padding: 0;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/flamingos.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 5em);
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .card {
