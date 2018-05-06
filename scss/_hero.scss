@@ -1,8 +1,18 @@
-.hero {
-    // background-image: url("../img/flamingos.jpeg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/flamingos.jpeg");
+@mixin hero-core () {
+    background-image: url("../img/flamingos.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, $hero-alpha), rgba(0, 0, 0, $hero-alpha)), url(#{$hero-img});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: calc(100vh - 5em);
+    color: $hero-text-color;
+}
+
+.hero {
+    @include hero-core();
+    height: calc(100vh - #{$nav-item-height});
+}
+
+.hero-short {
+    @include hero-core();
+    height: calc(100vh - 2 * #{$nav-item-height});
 }

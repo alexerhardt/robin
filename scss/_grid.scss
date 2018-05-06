@@ -25,7 +25,10 @@ $breakpoints: (
 *[class^="col-"], *[class*=" col-"] {
     padding-left: 15px;
     padding-right: 15px;
-    color: white;
+}
+
+.flex-even {
+    justify-content: space-evenly;
 }
 
 /**

@@ -351,7 +351,10 @@ template {
 *[class^="col-"], *[class*=" col-"] {
   padding-left: 15px;
   padding-right: 15px;
-  color: white;
+}
+
+.flex-even {
+  justify-content: space-evenly;
 }
 
 /**
@@ -518,6 +521,31 @@ template {
   height: inherit;
 }
 
+.input {
+  -webkit-appearance: none;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  color: #666;
+  margin: 0 0 1em 0;
+  height: 1.5em;
+}
+
+.textarea {
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  color: #666;
+  margin: 0 0 1em 0;
+}
+
+.select {
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  color: #666;
+  margin: 0 0 1em 0;
+  height: 1.5em;
+  background: white;
+}
+
 .navbar {
   color: white;
   background-color: orange;
@@ -547,11 +575,23 @@ template {
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../img/flamingos.jpeg");
+  background-image: url("../img/flamingos.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/flamingos.jpeg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  color: white;
   height: calc(100vh - 5em);
+}
+
+.hero-short {
+  background-image: url("../img/flamingos.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/flamingos.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: calc(100vh - 2 * 5em);
 }
 
 .flex-align-center {
@@ -567,4 +607,8 @@ template {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
   background: white;
   color: black;
+}
+
+img {
+  width: 100%;
 }

@@ -1,0 +1,30 @@
+$form-height: 1.5em;
+
+@mixin form-element-globals() {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    color: #666;
+    // padding: 0 0.8em;
+    margin: 0 0 1em 0;
+}
+
+@mixin form-element-height() {
+    height: $form-height;
+} 
+
+.input {
+    -webkit-appearance: none;
+    @include form-element-globals();
+    @include form-element-height();
+}
+
+.textarea {
+    @include form-element-globals();
+}
+
+.select {
+    @include form-element-globals();
+    @include form-element-height();
+    background: white;
+}
+
