@@ -1,4 +1,4 @@
-$form-height: 1.5em;
+$form-height: 2em;
 
 @mixin form-element-globals() {
     width: 100%;
@@ -20,6 +20,7 @@ $form-height: 1.5em;
 
 .textarea {
     @include form-element-globals();
+    padding: 0;
 }
 
 .select {

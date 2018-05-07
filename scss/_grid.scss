@@ -25,10 +25,34 @@ $breakpoints: (
 *[class^="col-"], *[class*=" col-"] {
     padding-left: 15px;
     padding-right: 15px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+@media (min-width: map-get($breakpoints, sm)) {
+    *[class^="col-"], *[class*=" col-"] {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 
 .flex-even {
     justify-content: space-evenly;
+}
+
+.bg-muted { background-color: $color-bg-muted; }
+.bg-dark { background-color: $color-bg-dark; }
+.bg-white { background-color: $color-bg-white ; }
+.bg-main { background-color: $color-bg-main ; }
+
+.section {
+    padding-top: $section-top-padding;
+    padding-bottom: $section-bottom-padding;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    margin: 0 0 1em 0;
 }
 
 /**
@@ -44,6 +68,12 @@ $breakpoints: (
         @for $i from 1 through $maxcols {
             .row-#{$i}#{$breakpoint-name} {
                 width: get-col-width($i);
+                @if ($i == $maxcols) {
+                    flex-direction: column;
+                }
+                @else {
+                    flex-direction: unset;
+                }
             }
             
             .col-#{$i}#{$breakpoint-name} {
@@ -51,4 +81,32 @@ $breakpoints: (
             }
         }
     }
+}
+
+
+.button {
+    text-align: center;
+    border: none;
+    margin: 0;
+    border-radius: 0;
+    padding: 0 2.5em;
+    line-height: 2.5em;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: black;
+    color: white;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, button, textarea, input, option, select {
+    font-family: 'Lato', sans-serif;
+}
+
+body, p, ul, button, textarea, input, option, select {
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-weight: 400;
 }

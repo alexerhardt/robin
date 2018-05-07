@@ -351,10 +351,45 @@ template {
 *[class^="col-"], *[class*=" col-"] {
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+@media (min-width: 576px) {
+  *[class^="col-"], *[class*=" col-"] {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 .flex-even {
   justify-content: space-evenly;
+}
+
+.bg-muted {
+  background-color: grey;
+}
+
+.bg-dark {
+  background-color: black;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-main {
+  background-color: white;
+}
+
+.section {
+  padding-top: 2.25em;
+  padding-bottom: 2.9925em;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 0 0 1em 0;
 }
 
 /**
@@ -364,36 +399,42 @@ template {
 @media (min-width: 0px) {
   .row-1 {
     width: 16.66667%;
+    flex-direction: unset;
   }
   .col-1 {
     width: 16.66667%;
   }
   .row-2 {
     width: 33.33333%;
+    flex-direction: unset;
   }
   .col-2 {
     width: 33.33333%;
   }
   .row-3 {
     width: 50%;
+    flex-direction: unset;
   }
   .col-3 {
     width: 50%;
   }
   .row-4 {
     width: 66.66667%;
+    flex-direction: unset;
   }
   .col-4 {
     width: 66.66667%;
   }
   .row-5 {
     width: 83.33333%;
+    flex-direction: unset;
   }
   .col-5 {
     width: 83.33333%;
   }
   .row-6 {
     width: 100%;
+    flex-direction: column;
   }
   .col-6 {
     width: 100%;
@@ -403,36 +444,42 @@ template {
 @media (min-width: 576px) {
   .row-1-sm {
     width: 16.66667%;
+    flex-direction: unset;
   }
   .col-1-sm {
     width: 16.66667%;
   }
   .row-2-sm {
     width: 33.33333%;
+    flex-direction: unset;
   }
   .col-2-sm {
     width: 33.33333%;
   }
   .row-3-sm {
     width: 50%;
+    flex-direction: unset;
   }
   .col-3-sm {
     width: 50%;
   }
   .row-4-sm {
     width: 66.66667%;
+    flex-direction: unset;
   }
   .col-4-sm {
     width: 66.66667%;
   }
   .row-5-sm {
     width: 83.33333%;
+    flex-direction: unset;
   }
   .col-5-sm {
     width: 83.33333%;
   }
   .row-6-sm {
     width: 100%;
+    flex-direction: column;
   }
   .col-6-sm {
     width: 100%;
@@ -442,36 +489,42 @@ template {
 @media (min-width: 768px) {
   .row-1-md {
     width: 16.66667%;
+    flex-direction: unset;
   }
   .col-1-md {
     width: 16.66667%;
   }
   .row-2-md {
     width: 33.33333%;
+    flex-direction: unset;
   }
   .col-2-md {
     width: 33.33333%;
   }
   .row-3-md {
     width: 50%;
+    flex-direction: unset;
   }
   .col-3-md {
     width: 50%;
   }
   .row-4-md {
     width: 66.66667%;
+    flex-direction: unset;
   }
   .col-4-md {
     width: 66.66667%;
   }
   .row-5-md {
     width: 83.33333%;
+    flex-direction: unset;
   }
   .col-5-md {
     width: 83.33333%;
   }
   .row-6-md {
     width: 100%;
+    flex-direction: column;
   }
   .col-6-md {
     width: 100%;
@@ -481,43 +534,85 @@ template {
 @media (min-width: 992px) {
   .row-1-lg {
     width: 16.66667%;
+    flex-direction: unset;
   }
   .col-1-lg {
     width: 16.66667%;
   }
   .row-2-lg {
     width: 33.33333%;
+    flex-direction: unset;
   }
   .col-2-lg {
     width: 33.33333%;
   }
   .row-3-lg {
     width: 50%;
+    flex-direction: unset;
   }
   .col-3-lg {
     width: 50%;
   }
   .row-4-lg {
     width: 66.66667%;
+    flex-direction: unset;
   }
   .col-4-lg {
     width: 66.66667%;
   }
   .row-5-lg {
     width: 83.33333%;
+    flex-direction: unset;
   }
   .col-5-lg {
     width: 83.33333%;
   }
   .row-6-lg {
     width: 100%;
+    flex-direction: column;
   }
   .col-6-lg {
     width: 100%;
   }
 }
 
+.button {
+  text-align: center;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  padding: 0 2.5em;
+  line-height: 2.5em;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: black;
+  color: white;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, button, textarea, input, option, select {
+  font-family: 'Lato', sans-serif;
+}
+
+body, p, ul, button, textarea, input, option, select {
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+  font-weight: 400;
+}
+
 .hero-text {
+  height: inherit;
+}
+
+footer {
+  height: 5em;
+  color: white;
+}
+
+footer > div {
   height: inherit;
 }
 
@@ -527,7 +622,7 @@ template {
   border: 1px solid #e3e3e3;
   color: #666;
   margin: 0 0 1em 0;
-  height: 1.5em;
+  height: 2em;
 }
 
 .textarea {
@@ -535,6 +630,7 @@ template {
   border: 1px solid #e3e3e3;
   color: #666;
   margin: 0 0 1em 0;
+  padding: 0;
 }
 
 .select {
@@ -542,7 +638,7 @@ template {
   border: 1px solid #e3e3e3;
   color: #666;
   margin: 0 0 1em 0;
-  height: 1.5em;
+  height: 2em;
   background: white;
 }
 
@@ -596,6 +692,7 @@ template {
 
 .flex-align-center {
   align-items: center;
+  flex-direction: unset;
 }
 
 .text-center {

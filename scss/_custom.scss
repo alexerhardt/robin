@@ -1,3 +1,12 @@
 .hero-text {
     height: inherit;
 }
+
+footer {
+    height: $nav-item-height;
+    color: white;
+}
+
+footer > div {
+    height: inherit;
+}
