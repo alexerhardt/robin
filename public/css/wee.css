@@ -344,8 +344,15 @@ template {
 
 *[class^="row"], *[class*=" row"] {
   display: flex;
-  width: 100%;
+  flex-direction: column;
+  width: 90%;
   margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .row {
+    flex-direction: unset;
+  }
 }
 
 *[class^="col-"], *[class*=" col-"] {
@@ -355,10 +362,19 @@ template {
   margin-right: -15px;
 }
 
+*[class^="col-"]:not(:last-child),
+*[class*=" col-"]:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+
 @media (min-width: 576px) {
   *[class^="col-"], *[class*=" col-"] {
     margin-left: 0px;
     margin-right: 0px;
+  }
+  *[class^="col-"]:not(:last-child),
+  *[class*=" col-"]:not(:last-child) {
+    margin-bottom: 0;
   }
 }
 
