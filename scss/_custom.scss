@@ -1,10 +1,11 @@
 .hero-text {
     height: inherit;
+
+    * {color: white;}
 }
 
 footer {
     height: $nav-item-height;
-    color: white;
 }
 
 footer > div {

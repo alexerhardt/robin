@@ -8,7 +8,9 @@ $nav-item-height: 5em;
 $section-top-padding: 2.25em;
 $section-bottom-padding: $section-top-padding * 1.33;
 
-$color-bg-muted: grey;
-$color-bg-dark: black;
-$color-bg-white: white;
-$color-bg-main: white;
+$color-bg-muted: rgba(249, 249, 249, 1);
+$color-bg-dark: rgba(6, 6, 6, 1);
+$color-bg-white: rgba(253, 253, 253, 1);
+$color-bg-main: rgba(253, 253, 253, 1);
+
+$color-text-alt: #2592A3;

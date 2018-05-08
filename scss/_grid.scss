@@ -11,9 +11,6 @@ $breakpoints: (
     @return percentage($number / $maxcols)
 }
 
-// TODO: Clean these up
-.bg-purple { background-color: #89479B; }
-.bg-yellow { background-color: #E38712; }
 .force-height { height: 100px; }
 
 *[class^="row"], *[class*=" row"] {
@@ -60,7 +57,10 @@ $breakpoints: (
 }
 
 .bg-muted { background-color: $color-bg-muted; }
-.bg-dark { background-color: $color-bg-dark; }
+.bg-dark { 
+    background-color: $color-bg-dark;
+    * { color: white;}
+ }
 .bg-white { background-color: $color-bg-white ; }
 .bg-main { background-color: $color-bg-main ; }
 
@@ -118,14 +118,38 @@ h4, h5, h6 {
     color: white;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, button, textarea, input, option, select {
+body, h1, h2, h3, h4, h5, h6, p, ul, button, textarea, input, option, select, a {
     font-family: 'Lato', sans-serif;
 }
 
-body, p, ul, button, textarea, input, option, select {
+body {
+    color: #555;
+}
+
+a, h1 {
+    color: #777;
+}
+
+a {
+    color: $color-text-alt;
+}
+
+h2 {
+    color: #999;
+}
+
+body, p, ul, button, textarea, input, option, select, a {
     font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, button {
     font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-color-alt {
+    color: $color-text-alt;
 }

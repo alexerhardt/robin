@@ -4,12 +4,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    color: $hero-text-color;
+    color: $hero-text-color !important;
 }
 
 .hero {
     @include hero-core();
     height: calc(100vh - #{$nav-item-height});
+
+}
+.hero-headline {
+    font-size: 4em;
+    margin-bottom: 0.4em;
 }
 
 .hero-short {

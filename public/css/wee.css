@@ -330,14 +330,6 @@ template {
   display: none;
 }
 
-.bg-purple {
-  background-color: #89479B;
-}
-
-.bg-yellow {
-  background-color: #E38712;
-}
-
 .force-height {
   height: 100px;
 }
@@ -383,19 +375,23 @@ template {
 }
 
 .bg-muted {
-  background-color: grey;
+  background-color: #f9f9f9;
 }
 
 .bg-dark {
-  background-color: black;
+  background-color: #060606;
+}
+
+.bg-dark * {
+  color: white;
 }
 
 .bg-white {
-  background-color: white;
+  background-color: #fdfdfd;
 }
 
 .bg-main {
-  background-color: white;
+  background-color: #fdfdfd;
 }
 
 .section {
@@ -607,11 +603,27 @@ h4, h5, h6 {
   color: white;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ul, button, textarea, input, option, select {
+body, h1, h2, h3, h4, h5, h6, p, ul, button, textarea, input, option, select, a {
   font-family: 'Lato', sans-serif;
 }
 
-body, p, ul, button, textarea, input, option, select {
+body {
+  color: #555;
+}
+
+a, h1 {
+  color: #777;
+}
+
+a {
+  color: #2592A3;
+}
+
+h2 {
+  color: #999;
+}
+
+body, p, ul, button, textarea, input, option, select, a {
   font-weight: 300;
 }
 
@@ -619,13 +631,24 @@ h1, h2, h3, h4, h5, h6, button {
   font-weight: 400;
 }
 
+a {
+  text-decoration: none;
+}
+
+.text-color-alt {
+  color: #2592A3;
+}
+
 .hero-text {
   height: inherit;
 }
 
+.hero-text * {
+  color: white;
+}
+
 footer {
   height: 5em;
-  color: white;
 }
 
 footer > div {
@@ -659,10 +682,12 @@ footer > div {
 }
 
 .navbar {
-  color: white;
-  background-color: orange;
   display: flex;
   width: 100%;
+}
+
+.nav-logo a {
+  font-size: 1.33em;
 }
 
 .nav-item {
@@ -684,6 +709,7 @@ footer > div {
   display: inline-block;
   list-style-type: none;
   padding: 0;
+  margin-right: 1.5em;
 }
 
 .hero {
@@ -692,8 +718,13 @@ footer > div {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
+  color: white !important;
   height: calc(100vh - 5em);
+}
+
+.hero-headline {
+  font-size: 4em;
+  margin-bottom: 0.4em;
 }
 
 .hero-short {
@@ -702,13 +733,17 @@ footer > div {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white;
+  color: white !important;
   height: calc(100vh - 2 * 5em);
 }
 
 .flex-align-center {
   align-items: center;
   flex-direction: unset;
+}
+
+.flex-space-between {
+  justify-content: space between;
 }
 
 .text-center {
