@@ -713,12 +713,6 @@ footer > div {
 }
 
 .hero {
-  background-image: url("../img/flamingos.jpeg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/flamingos.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  color: white !important;
   height: calc(100vh - 5em);
 }
 
@@ -728,13 +722,13 @@ footer > div {
 }
 
 .hero-short {
-  background-image: url("../img/flamingos.jpeg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(../img/flamingos.jpeg);
+  height: calc(100vh - 2 * 5em);
+}
+
+.hero-img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: white !important;
-  height: calc(100vh - 2 * 5em);
 }
 
 .flex-align-center {
