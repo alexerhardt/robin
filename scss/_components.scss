@@ -1,0 +1,93 @@
+/**
+ * components.scss
+ * 
+ * components for Robin
+ */
+
+
+/******************************************************************************
+
+    general styling
+
+******************************************************************************/
+
+img {
+    width: 100%;
+}
+
+
+/******************************************************************************
+
+    navigation utilities
+
+******************************************************************************/
+
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+.nav-logo {
+    a {
+        font-size: 1.33em;
+    }
+}
+
+.nav-item {
+    padding: 0 2.5em;
+    height: $nav-item-height;
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    @include remove-webkit-margin();
+
+    li {
+        display: inline-block;
+        list-style-type: none;
+        padding: 0;
+        margin-right: 1.5em;
+    }
+}
+
+
+/******************************************************************************
+
+    hero - utilities to create hero shots
+
+******************************************************************************/
+
+ // Standard hero - takes entire page except navbar
+.hero { 
+    height: calc(100vh - #{$nav-item-height}); 
+}
+
+// Short - leaves some space at the bottom
+.hero-short {
+    height: calc(100vh - 2 * #{$nav-item-height});
+}
+
+.hero-headline {
+    font-size: $hero-font-size;
+    margin-bottom: $hero-text-margin-bottom;
+}
+
+.hero-img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+ /******************************************************************************
+
+    cards - utilities to create cards
+
+ ******************************************************************************/
+
+.card {
+    padding: $card-padding;
+    box-shadow: $card-box-shadow;
+    background: $card-bg-color;
+}

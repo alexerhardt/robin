@@ -1,16 +1,29 @@
-// Change this when bundling
+/**
+ * globals
+ */
+$color-bg-muted: rgba(249, 249, 249, 1);
+$color-bg-dark: rgba(6, 6, 6, 1);
+$color-bg-white: rgba(253, 253, 253, 1);
+$color-bg-main: rgba(253, 253, 253, 1);
+$color-text-alt: #2592A3;
+
+/**
+ * hero shot
+ */
 $hero-img: "../img/flamingos.jpeg";
-$hero-alpha: 0.25;
 $hero-text-color: white;
+$hero-font-size: 4em;
+$hero-text-margin-bottom: 0.25;
+
+/**
+ * cards
+ */
+$card-padding: 2.5em 2.5em;
+$card-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+$card-bg-color: $color-bg-white;
+
 
 $nav-item-height: 5em;
 
 $section-top-padding: 2.25em;
 $section-bottom-padding: $section-top-padding * 1.33;
-
-$color-bg-muted: rgba(249, 249, 249, 1);
-$color-bg-dark: rgba(6, 6, 6, 1);
-$color-bg-white: rgba(253, 253, 253, 1);
-$color-bg-main: rgba(253, 253, 253, 1);
-
-$color-text-alt: #2592A3;
