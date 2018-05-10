@@ -6,3 +6,9 @@
     background-color: #2592a3;
     background-image: url("https://www.transparenttextures.com/patterns/light-mesh.png");
  }
+
+@media (min-width: 768px ) {
+    .p-big p  {
+        font-size: 1.2em;
+    }
+}
