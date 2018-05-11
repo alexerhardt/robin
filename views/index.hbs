@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav class="navbar navbar-mobile">
     <div class="nav-item nav-logo">
         <a href="/">Robin</a>
     </div>
@@ -32,7 +32,10 @@
             </p>
             <p>
                 Note that the second line is important, as Robin does not come
-                packaged with its default font.
+                packaged with its default font. You may change it by adding
+                your own font and changing 
+                <span class="code-quote">$font-primary-type</span> in
+                <span class="code-quote">_variables.scss</span>
             </p>
         </div>
     </div>
@@ -101,8 +104,9 @@ $breakpoints: (
             </code></pre>
             <p>
                 When you add or remove breakpoints to this map, the grid generator
-                function will automatically create all breakpoint classes. To
-                alter how the grid behaves at different breakpoints, you can
+                function will automatically create all the breakpoint classes with
+                their respective breakpoint names as suffixes. 
+                To alter how the grid behaves at different breakpoints, you can
                 thus do the following:
             </p>
             <pre><code>
@@ -197,22 +201,41 @@ h6   { @include set-font-scale(0.725em, 1.05) }
         <div class="col-6 col-5-md">
             <h2>Navbar Component</h2>
             <p>
-                Navigation bars can be easily created by adding the <span class="code-quote">.navbar component</span>.
-                Navs span 100% of the page width.
+                Navigation bars can be easily created by adding the <span class="code-quote">.navbar</span>
+                class to a nav element. Navs span 100% of the page width.
             </p>
             <p>
-                To add nav subcomponents, add the <span class="code-quote">.nav-item</span>class.
+                To add nav subcomponents, add the <span class="code-quote">.nav-item</span> class
+                to a div inside the navbar.
                 Two subcomponents are supported at present:
                 <span class="code-quote">.nav-logo</span> for your branding, and
                 <span class="code-quote">.nav-list</span> for navigational links.
             </p>
             <p>
-                You can make the navbar fully mobile responsive with
+                You can make the navbar mobile-responsive with
                 <span class="code-quote">.nav-mobile</span>.
                 Do note however that only a navbar made of a logo and a list of links
                 is supported right now. If you want more complex elements
                 and layouts, you'll have to customise the code.
             </p>
+            <p>
+                Putting it all together, we have:
+
+            </p>
+            <pre><code>
+&lt;nav class&quot;navbar navbar-mobile&quot;&gt;
+    &lt;div class=&quot;nav-item nav-logo&quot;&gt;
+        &lt;a href=&quot;/&quot;&gt;Your Logo&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;nav-item nav-list&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;/1.html&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/2.html&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;/3.html&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+            </code></pre>
 
 
         </div>
@@ -221,7 +244,6 @@ h6   { @include set-font-scale(0.725em, 1.05) }
 <section class="section bg-muted">
     <div class="row row-4-md p-big flex-even">
         <div class="col-6 col-5-md">
-
         </div>
     </div>
 </section>
