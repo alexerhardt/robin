@@ -29,7 +29,7 @@ button, textarea, input, option, select, a {
 
 h1, h2, h3,
 h4, h5, h6 {
-    margin: 0 0 0.66em 0;
+    margin: $header-margin;
 }
 
 h1, h2, h3, h4, h5, h6, button { 
@@ -40,65 +40,51 @@ body, p, ul, button, textarea, input, option, select, a {
     font-weight: $font-weight-secondary;
 }
 
-body { color: $font-color-body; }
-h1 { color: $font-color-h1; }
-h2 { color: $font-color-h2; }
+body { color: $color-text-body; }
+h1 { color: $color-text-h1; }
+h2 { color: $color-text-h2; }
 a { 
-   color: $font-color-link; 
+   color: $color-text-link; 
    text-decoration: none;
 }
 
 .text-color-alt {
-    color: $font-color-alt;
+    color: $color-text-alt;
 }
 
 .text-center {
     text-align: center;
 }
 
-/**
- *  Sets font size and line height - useful for establishing type scale
- * @param {Number} $size - font size
- * @param {Number} $line-height - font line height
- */
-@mixin set-font-scale($size, $line-height) {
-    font-size: $size;
-    line-height: $line-height;
-}
 
-/**
- * Typographic scale
- * Adapted from
- * http://typecast.com/blog/a-more-modern-scale-for-web-typography
- * 
- * Also makes use of CSS variables.
- */
- 
-body { @include set-font-scale(1em, 1.25) }
-h1   { @include set-font-scale(2em, 1.25) }
-h2   { @include set-font-scale(1.625em, 1.25) }
-h3   { @include set-font-scale(1.375em, 1.14) }
-h4   { @include set-font-scale(1.125em, 1.11) }
-h5   { @include set-font-scale(0.855em, 1.08) }
-h6   { @include set-font-scale(0.725em, 1.05) }
 
-@media (min-width: map-get($breakpoints, md)) {
-    body { @include set-font-scale(1em, 1.375) }
-    h1   { @include set-font-scale(2.5em, 1.125) }
-    h2   { @include set-font-scale(2em, 1.25) }
-    h3   { @include set-font-scale(1.5em, 1.25) }
-    h4   { @include set-font-scale(1.222em, 1.22) }
-}
-
-@media (min-width: map-get($breakpoints, lg)) {
-    h1   { @include set-font-scale(3em, 1.05) }
-    h2   { @include set-font-scale(2.25em, 1.25) }
-    h3   { @include set-font-scale(1.75em, 1.25) }
-}
 
 /******************************************************************************
 
-    navigation utilities
+    background color styles
+
+******************************************************************************/
+.bg-main { 
+    background-color: $color-bg-main; 
+}
+
+.bg-white { 
+    background-color: $color-bg-white; 
+}
+
+.bg-muted { 
+    background-color: $color-bg-muted; 
+}
+
+.bg-dark { 
+    background-color: $color-bg-dark;
+    * { color: $color-text-bg-dark; } 
+ }
+
+
+/******************************************************************************
+
+    navbar
 
 ******************************************************************************/
 
@@ -109,12 +95,12 @@ h6   { @include set-font-scale(0.725em, 1.05) }
 
 .nav-logo {
     a {
-        font-size: 1.33em;
+        font-size: $nav-logo-font-size;
     }
 }
 
 .nav-item {
-    padding: 0 2.5em;
+    padding: $nav-item-padding;
     height: $nav-item-height;
     display: flex;
     align-items: center;
@@ -127,7 +113,7 @@ h6   { @include set-font-scale(0.725em, 1.05) }
         display: inline-block;
         list-style-type: none;
         padding: 0;
-        margin-right: 1.5em;
+        margin-right: $nav-list-li-margin-right;
     }
 }
 
@@ -149,7 +135,6 @@ h6   { @include set-font-scale(0.725em, 1.05) }
 }
 
 .hero-headline {
-    font-size: $hero-font-size;
     margin-bottom: $hero-text-margin-bottom;
 }
 
@@ -208,3 +193,52 @@ h6   { @include set-font-scale(0.725em, 1.05) }
     background-color: $form-select-white;
 }
 
+
+/******************************************************************************
+
+    buttons
+
+******************************************************************************/
+
+.button {
+    text-align: center;
+    border: $button-border;
+    margin: $button-margin;
+    border-radius: $button-border-radius;
+    padding: $button-padding;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button-primary {
+    background-color: $button-primary-color-bg;
+    color: $button-primary-color-text;
+}
+
+.button-transparent {
+    background-color: $button-transparent-color-bg;
+    color: $button-transparent-color-text;
+    box-shadow: inset 0 0 0 1px $button-transparent-color-text;
+}
+
+
+/******************************************************************************
+
+    flex
+
+******************************************************************************/
+
+.flex-even {
+    justify-content: space-evenly;
+}
+
+.flex-align-center {
+    align-items: center;
+    flex-direction: unset;
+}
+
+.flex-space-between {
+    justify-content: space between
+}

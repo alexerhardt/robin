@@ -1,6 +1,8 @@
-/**
- * globals
- */
+/******************************************************************************
+
+    superglobals - # of columns, breakpoints, color definitions
+
+******************************************************************************/
 $maxcols: 6;
 
 $breakpoints: (
@@ -14,41 +16,122 @@ $aquamarine-main: #2592A3;
 $grey-darker: #555;
 $grey-medium: #777;
 $grey: #999;
+$pure-white: #fff;
+$light-black: rgb(6, 6, 6);
+$grey-muted: rgb(249, 249, 249);
+$impure-white: rgb(253, 253, 253);
 
-$color-bg-muted: rgba(249, 249, 249, 1);
-$color-bg-dark: rgba(6, 6, 6, 1);
-$color-bg-white: rgba(253, 253, 253, 1);
-$color-bg-main: rgba(253, 253, 253, 1);
+
+
+/******************************************************************************
+
+    font scaling
+
+******************************************************************************/
 
 /**
- * font styling
+ *  Sets font size and line height - useful for establishing type scale
+ * @param {Number} $size - font size
+ * @param {Number} $line-height - font line height
+ */
+@mixin set-font-scale($size, $line-height) {
+    font-size: $size;
+    line-height: $line-height;
+}
+
+/**
+ * Typographic scale
+ * Adapted from
+ * http://typecast.com/blog/a-more-modern-scale-for-web-typography
+ * 
+ * Also makes use of CSS variables.
+ */
+ 
+body { @include set-font-scale(1em, 1.25) }
+h1   { @include set-font-scale(2em, 1.25) }
+h2   { @include set-font-scale(1.625em, 1.25) }
+h3   { @include set-font-scale(1.375em, 1.14) }
+h4   { @include set-font-scale(1.125em, 1.11) }
+h5   { @include set-font-scale(0.855em, 1.08) }
+h6   { @include set-font-scale(0.725em, 1.05) }
+.hero-headline { @include set-font-scale(3em, 1.25); }
+
+@media (min-width: map-get($breakpoints, md)) {
+    body { @include set-font-scale(1em, 1.375) }
+    h1   { @include set-font-scale(2.5em, 1.125) }
+    h2   { @include set-font-scale(2em, 1.25) }
+    h3   { @include set-font-scale(1.5em, 1.25) }
+    h4   { @include set-font-scale(1.222em, 1.22) }
+    .hero-headline { @include set-font-scale(3.5em, 1.1); }
+}
+
+@media (min-width: map-get($breakpoints, lg)) {
+    h1   { @include set-font-scale(3em, 1.05) }
+    h2   { @include set-font-scale(2.25em, 1.25) }
+    h3   { @include set-font-scale(1.75em, 1.25) }
+    .hero-headline { @include set-font-scale(4em, 1.1); }
+}
+
+
+/******************************************************************************
+
+    component variables
+
+******************************************************************************/
+
+/**
+ * type and weight
  */
 $font-primary-type: 'Lato', sans-serif;
 $font-weight-primary: 400;
 $font-weight-secondary: 300;
-$font-color-body: $grey-darker;
-$font-color-h1: $grey-medium;
-$font-color-h2: $grey;
-$font-color-link: $aquamarine-main;
-$font-color-alt: $aquamarine-main;
+
+/**
+ * default text colors
+ */
+$color-text-body: $grey-darker;
+$color-text-h1: $grey-medium;
+$color-text-h2: $grey;
+$color-text-link: $aquamarine-main;
+$color-text-alt: $aquamarine-main;
+
+/**
+ * background color with text pairings
+ */
+$color-bg-main: $impure-white;
+$color-bg-muted: $grey-muted;
+$color-bg-white: $impure-white;
+$color-bg-dark: $light-black;
+$color-text-bg-dark: $pure-white;
+
+
+/**
+ * text styling
+ */
+$header-margin: 0 0 0.66em 0;
 
 /**
  * grid and layout
  */
 $section-top-padding: 2.25em;
 $section-bottom-padding: $section-top-padding * 1.33;
+$row-width: 90%;
+$col-gutter-size: 1em;
+$col-margin-bottom: 1.5em;
 
 /**
  * navigation
  */
 $nav-item-height: 5em;
+$nav-logo-font-size: 1.33em;
+$nav-item-padding: 0 2.5em;
+$nav-list-li-margin-right: 1.5em;
 
 /**
  * hero shot
  */
 $hero-img: "../img/flamingos.jpeg";
 $hero-text-color: white;
-$hero-font-size: 4em;
 $hero-text-margin-bottom: 0.25em;
 
 /**
@@ -68,5 +151,20 @@ $form-element-margin: 0 0 1em 0;
 $form-element-text-color: #666;
 $form-select-white: $color-bg-white;
 
+/**
+ * buttons
+ */
+$button-margin: 0 0.5em;
+$button-border: none;
+$button-border-radius: 0;
+$button-padding: 0 2.25em;
+$button-font-weight: 400;
+$button-line-height: 2.5em;
+
+$button-primary-color-bg: $light-black;
+$button-primary-color-text: $pure-white;
+
+$button-transparent-color-bg: unset;
+$button-transparent-color-text: $pure-white;
 
 
