@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/example', function(req, res, next) {
-  res.render('example', { tile: 'Robin - Example Page' });
+  res.render('example', { title: 'Robin - Example Page' });
 });
 
 module.exports = router;

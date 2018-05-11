@@ -12,6 +12,15 @@
     }
 }
 
+@media (min-width: map-get($breakpoints, sm)) {
+    .hero-main {
+        .button {
+            margin-bottom: 1em;
+            width: 25%;
+        }
+    }
+}
+
 @media (min-width: map-get($breakpoints, md)) {
     .hero-main {
         .button {

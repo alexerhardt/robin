@@ -17,6 +17,7 @@ $breakpoint-md: map-get($breakpoints, md);
 $breakpoint-lg: map-get($breakpoints, lg);
 
 $aquamarine-main: #2592A3;
+$eighties-pink: #F04393;
 $grey-darker: #555;
 $grey-medium: #777;
 $grey: #999;
@@ -166,6 +167,10 @@ $button-line-height: 2.5em;
 
 $button-primary-color-bg: $light-black;
 $button-primary-color-text: $pure-white;
+$button-accent-1-color-bg: $aquamarine-main;
+$button-accent-1-color-text: $pure-white;
+$button-accent-2-color-bg: $eighties-pink;
+$button-accent-2-color-text: $pure-white;
 
 $button-transparent-color-bg: unset;
 $button-transparent-color-text: $pure-white;

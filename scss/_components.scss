@@ -236,6 +236,25 @@ a {
     background-color: $button-primary-color-bg;
     color: $button-primary-color-text;
 }
+.button-primary:hover {
+    background-color: lighten($button-primary-color-bg, 10%);
+}
+
+.button-accent-1 {
+    background-color: $button-accent-1-color-bg;
+    color: $button-accent-1-color-text;
+}
+.button-accent-1:hover {
+    background-color: lighten($button-accent-1-color-bg, 10%); 
+}
+
+.button-accent-2 {
+    background-color: $button-accent-2-color-bg;
+    color: $button-accent-2-color-text;
+}
+.button-accent-2:hover {
+    background-color: lighten($button-accent-2-color-bg, 10%); 
+}
 
 .button-transparent {
     background-color: $button-transparent-color-bg;
@@ -256,9 +275,12 @@ a {
 
 .flex-align-center {
     align-items: center;
-    flex-direction: unset;
 }
 
 .flex-space-between {
     justify-content: space between
+}
+
+.flex-center {
+    justify-content: center;
 }

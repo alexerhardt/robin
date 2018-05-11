@@ -12,7 +12,7 @@
             <h1 class="hero-headline">Simple. Flexible. Light.</h1>
             <h3 class="hero-subheadline">Build simple and elegant websites with Robin</h3>
             <a class="button button-transparent" href="/example">Example Page</a>
-            <a class="button button-primary" href="/get-files">Download Files</a>
+            <a class="button button-primary" href="http://res.cloudinary.com/dxfgtjxiz/raw/upload/v1526041925/robin.min.zip">Download Files</a>
         </div>
     </div>
 </section>
@@ -21,7 +21,7 @@
         <div class="col-6 col-5-md">
             <h2>Getting Started</h2>
             <p>Download the files, unzip them with your program of choice, 
-                then copy the file <span class="code-quote">robin.css</span> to your css folder
+                then copy the file <span class="code-quote">robin.min.css</span> to your css folder
                 (normally, <span class="code-quote">public/css</span>).
             </p>
             <p>Next, include the file inside your HTML head like this:
@@ -41,14 +41,19 @@
     </div>
     <div class="row row-4-md p-big flex-even">
         <div class="col-6 col-5-md">
-            <h3>Customizing</h3>
-            <p>The quickest way to customise Robin is to change the variables
+            <h3>Customizing Robin</h3>
+            <p>The quickest way to customize Robin is to change the variables
                 in <span class="code-quote">_variables.scss</span> and to recompile
                 the provided .scss files.
             </p>
             <p>
-               If you don't know Sass, you can always layer your own stylesheets
-               on top of Robin. But we recommend that you <a href="https://sass-lang.com/guide">learn Sass</a> - you can 
+                For new classes and more advanced modifications, we sugget that
+                you add a <span class="code-quote">_custom.scss</span> file to
+                the source.
+            </p>
+            <p>
+               If you don't know Sass, you can always layer your own plain stylesheets
+               on top of Robin by adding them to your public css folder. But we recommend that you <a href="https://sass-lang.com/guide">learn Sass</a> - you can 
                get going in an afternoon and it will forever change the way
                you do CSS - guaranteed!
             </p>
@@ -164,9 +169,9 @@ $breakpoints: (
             <h3>Flex Utilities</h3>
             <p>Rows are created as flex containers. To play with how columns
                 are arranged inside them, you can the following classes:
-                <span class="code-quote">flex-even</span>, 
-                <span class="code-quote">flex-align-center</span>, and 
-                <span class="code-quote">flex-space-between</span>.
+                <span class="code-quote">.flex-even</span>, 
+                <span class="code-quote">.flex-align-center</span>, and 
+                <span class="code-quote">.flex-space-between</span>.
             </p>
             <p>You may also want to add you own flex classes. Refer to
                 the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">flex documentation</a> to see the possibilities.
@@ -241,9 +246,180 @@ h6   { @include set-font-scale(0.725em, 1.05) }
         </div>
     </div>
 </section>
-<section class="section bg-muted">
+<section class="section bg-white">
     <div class="row row-4-md p-big flex-even">
         <div class="col-6 col-5-md">
+            <h2>Hero Component</h2>
+            <p>
+                You can create hero shots (an opening image covering
+                all or most of the page above the fold) by applying the
+                <span class="code-quote">.hero</span> or
+                <span class="code-quote">.hero-short</span> classes to a section
+                right below the navbar.
+            </p>
+            <p>
+                <span class="code-quote">.hero</span> 
+                creates a cover that goes to the very bottom of the page, while
+                <span class="code-quote">.hero-short</span> leaves some nice space
+                below (check the <a href="/example">example page</a> for a
+                hero-short sample). 
+            </p>
+            <p>
+                The code would look like this:
+            </p>
+            <pre><code>
+&lt;nav class=&quot;navbar&quot;&gt;
+    &lt;!-- Your navbar code --&gt;
+&lt;/nav&gt;
+&lt;section class=&quot;hero&quot;&gt;
+    &lt;!-- Your hero nested elements - headlines, etc. - here --&gt;
+&lt;/section&gt;
+&lt;section class=&quot;section&quot;&gt;
+    &lt;!-- Your first regular section here --&gt;
+&lt;/section&gt; 
+            </code></pre>
         </div>
     </div>
 </section>
+<section class="section bg-muted">
+    <div class="row row-4-md p-big flex-even">
+        <div class="col-6 col-5-md">
+            <h2>Card Component</h2>
+            <p>
+                You can create cards to visually differentiate blocks of content
+                inside your page. Cards must be added inside columns, and they
+                span the entire width of the parent column.
+            </p>
+        </div>
+    </div>
+    <div class="row row-4-md p-big flex-even">
+        <div class="col-6 col-2-lg">
+            <div class="card">
+                <h3>This is a card.</h3>
+                <p>
+                    You may add any content you wish here. It
+                    will make your content stand out.
+                </p>
+            </div>
+        </div>
+        <div class="col-6 col-2-lg">
+            <div class="card">
+                <h3>This is a card.</h3>
+                <p>
+                    You may add any content you wish here. It
+                    will make your content stand out.
+                </p>
+            </div>
+        </div>
+        <div class="col-6 col-2-lg">
+            <div class="card">
+                <h3>This is a card.</h3>
+                <p>
+                    You may add any content you wish here. It
+                    will make your content stand out.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row row-4-md p-big flex-even">
+        <div class="col-6 col-5-md">
+            <p>Your code should look like this:</p>
+            <pre><code>
+&lt;div class=&quot;row flex-even&quot;&gt;
+    &lt;div class=&quot;col col-2-lg&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;!-- Your card content here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col col-2-lg&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;!-- Your card content here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col col-2-lg&quot;&gt;
+        &lt;div class=&quot;card&quot;&gt;
+            &lt;!-- Your card content here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+        </div>
+    </div>
+</section>
+<section class="section bg-white">
+    <div class="row row-4-md p-big flex-even">
+        <div class="col-6 col-5-md">
+            <h2>Form Component</h2>
+            <p>
+                Robin restyles form elements to look clean, simple, and readable.
+                At present the restyled elements are input, select, textarea, and 
+                buttons (for buttons, see the next section).
+                To apply the form stylings, do:
+            </p>
+            <pre><code>
+&lt;form&gt;
+    &lt;input class=&quot;input&quot;&gt;
+    &lt;select class=&quot;select&quot;&gt;
+        &lt;!-- Your select options here --&gt;
+    &lt;/select&gt;
+    &lt;textarea class=&quot;textarea&quot;&gt;&lt;/textarea&gt;
+&lt;/form&gt;
+            </code></pre>
+            <p>
+                As with all components, form styles can be easily tweaked
+                in <span class="code-quote">_variables.scss</span>. Be sure
+                to check our <a href="/example">example page</a> to see how
+                forms look.
+
+            </p>
+            
+
+        </div>
+    </div>
+</section>
+<section class="section bg-muted">
+    <div class="row row-4-md p-big flex-even">
+        <div class="col-6 col-5-md">
+            <h2>Button Component</h2>
+            <p>
+                Robin buttons have basic styling and hover behavior. They can
+                be applied to the HTML
+                <span class="code-quote">button</span> and
+                <span class="code-quote">a</span> elements, and they come in a few
+                different flavors:
+            </p>
+
+        </div>
+    </div>
+    <div class="row row-4-md p-big flex-center">
+        <div class="col-6 col-1-md">
+            <button class="button button-primary">Primary</button>
+        </div>
+        <div class="col-6 col-1-md">
+            <button class="button button-accent-1">Accent 1</button>
+        </div>
+        <div class="col-6 col-1-md">
+            <button class="button button-accent-2">Accent 2</button>
+        </div>
+    </div>
+    <div class="row row-4-md p-big flex-even">
+        <div class="col-6 col-5-md">
+            <p>In code: </p>
+            <pre><code>
+&lt;button class=&quot;button button-primary&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;button button-accent-1&quot;&gt;Accent 1&lt;/button&gt;
+&lt;button class=&quot;button button-accent-2&quot;&gt;Accent 2&lt;/button&gt;
+            </code></pre>
+
+        </div>
+    </div>
+</section>
+<footer class="bg-dark">
+    <div class="row flex-align-center">
+        <div class="col-6 text-center">
+            <p>
+                Made with Robin. Copyright 2018 Alex Erhardt.
+            </p>
+        </div>
+    </div>
+</footer>

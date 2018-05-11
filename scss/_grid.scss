@@ -36,10 +36,8 @@
 }
 
 
-
-
-
-@media (min-width: map-get($breakpoints, sm)) {
+/* Unstack columns at medium breakpoint */
+@media (min-width: map-get($breakpoints, md)) {
     .row {
         flex-direction: unset;
     }
@@ -66,7 +64,7 @@
     margin-bottom: $col-margin-bottom;
 }
 
-@media (min-width: map-get($breakpoints, sm)) {
+@media (min-width: map-get($breakpoints, md)) {
     *[class^="col-"], *[class*=" col-"] {
         margin-left: 0;
         margin-right: 0;

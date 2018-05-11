@@ -486,6 +486,13 @@ template {
   width: 50%;
 }
 
+@media (min-width: 576px) {
+  .hero-main .button {
+    margin-bottom: 1em;
+    width: 25%;
+  }
+}
+
 @media (min-width: 768px) {
   .hero-main .button {
     margin-bottom: 1em;
@@ -564,7 +571,8 @@ footer > div {
   margin-bottom: 1em;
 }
 
-@media (min-width: 576px) {
+/* Unstack columns at medium breakpoint */
+@media (min-width: 768px) {
   .row {
     flex-direction: unset;
   }
@@ -591,7 +599,7 @@ footer > div {
   margin-bottom: 1.5em;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   *[class^="col-"], *[class*=" col-"] {
     margin-left: 0;
     margin-right: 0;
@@ -1015,6 +1023,28 @@ a {
   color: #fff;
 }
 
+.button-primary:hover {
+  background-color: #202020;
+}
+
+.button-accent-1 {
+  background-color: #2592A3;
+  color: #fff;
+}
+
+.button-accent-1:hover {
+  background-color: #2eb7cd;
+}
+
+.button-accent-2 {
+  background-color: #F04393;
+  color: #fff;
+}
+
+.button-accent-2:hover {
+  background-color: #f472ae;
+}
+
 .button-transparent {
   background-color: unset;
   color: #fff;
@@ -1032,9 +1062,12 @@ a {
 
 .flex-align-center {
   align-items: center;
-  flex-direction: unset;
 }
 
 .flex-space-between {
   justify-content: space between;
+}
+
+.flex-center {
+  justify-content: center;
 }
